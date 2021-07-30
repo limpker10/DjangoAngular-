@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .model import Movie
+from .models import Movie
 
 
 class MovieSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Movie
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id', 'title', 'desc', 'year']
 
