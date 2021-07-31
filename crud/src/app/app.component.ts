@@ -7,7 +7,7 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  movies = [{title:'titanic'},{title : 'avatar'}]
+  movies = [{title:'test'}]
   constructor (private api:ApiService){
     this.getMovies();
   }
