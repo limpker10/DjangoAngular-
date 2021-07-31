@@ -15,6 +15,18 @@ export class AppComponent {
     this.api.getAllMovies().subscribe(
       data =>{
         this.movies = data
+        console.log(data)
+      },
+      error =>{
+        console.log(error)
+      }
+    )
+  }
+  movieClicked= (movie:any) =>{
+    this.api.getOneMovies(movie.id).subscribe(
+      data =>{
+        
+        console.log(data)
       },
       error =>{
         console.log(error)

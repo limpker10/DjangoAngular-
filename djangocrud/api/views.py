@@ -11,5 +11,5 @@ class MovieViewSet(viewsets.ModelViewSet):
     
     def list(self,request,*args,**kwargs):
     	movies = Movie.objects.all()
-    	serializer = MovieMiniSerializer(movies,nany=True)
+    	serializer = MovieMiniSerializer(movies,many=True)
     	return  Response(serializer.data)
