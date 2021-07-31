@@ -8,3 +8,8 @@ class MovieSerializer(serializers.HyperlinkedModelSerializer):
         model = Movie
         fields = ['id', 'title', 'desc', 'year']
 
+class MovieMiniSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Movie
+        fields = ['id', 'title']
+
