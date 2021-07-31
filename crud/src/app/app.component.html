@@ -4,6 +4,7 @@
     <h2 (click) = "movieClicked(movie)">{{movie.title}}</h2>
   </li>
 </ul>
-Title <input type="text" [(ngModel)]='title'><br>
-Description <input type="text" [(ngModel)]='desc'><br>
-Year <input type="text" [(ngModel)]='year'><br>
+Title <input type="text" [(ngModel)]='selectedMovie.title'><br>
+Description <input type="text" [(ngModel)]='selectedMovie.desc'><br>
+Year <input type="text" [(ngModel)]='selectedMovie.year'><br>
+<button (click)="updateMovie()">PUT</button>
